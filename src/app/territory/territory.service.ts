@@ -11,30 +11,30 @@ export class TerritoryService {
 
   private territory: Territory;
 
-  _dataChange = new BehaviorSubject<TerritoryLevel[]>(this.buildData());
+  _dataChange = new BehaviorSubject<Territory>(this.buildData());
 
   constructor() {
   }
 
-  private buildData(): TerritoryLevel[] {
+  private buildData(): Territory {
     this.territory = new Territory();
     let root = this.territory.createRoot('MATRIZ GLOBAL', 'Muhammad-Bande');
 
-    let br = root.addChildrenManager('BR Division', 'Jair Bonosauro');
-    let usa = root.addChildrenManager('USA Division', 'Donald Trump');
-    let china = root.addChildrenManager('China Division', 'Chi Jin Ping');
+    let br = root.addChildren('BR Division', 'Jair Bonosauro');
+    let usa = root.addChildren('USA Division', 'Donald Trump');
+    let china = root.addChildren('China Division', 'Chi Jin Ping');
 
-    let sp = br.addChildrenManager('SP', 'John Doria');
-    let go = br.addChildrenManager('GO', 'Ronald Caiado');
-    let df = br.addChildrenManager('DF', 'Ibaneis Rocha');
+    let sp = br.addChildren('SP', 'John Doria');
+    let go = br.addChildren('GO', 'Ronald Caiado');
+    let df = br.addChildren('DF', 'Ibaneis Rocha');
 
-    go.addChildrenOperation('Goiânia', 'Iris Resende');
-    go.addChildrenOperation('Anápolis', 'Ricardo Harris');
-    go.addChildrenOperation('Aparecida de Goiânia', 'Gustavo Mendanha');
-    go.addChildrenOperation('Senador Canedo', 'Divino Lemes');
+    go.addChildren('Goiânia', 'Iris Resende');
+    go.addChildren('Anápolis', 'Ricardo Harris');
+    go.addChildren('Aparecida de Goiânia', 'Gustavo Mendanha');
+    go.addChildren('Senador Canedo', 'Divino Lemes');
 
     // this._dataChange.next(this.territory.level);
-    return this.territory.level;
+    return this.territory;
 
   }
 

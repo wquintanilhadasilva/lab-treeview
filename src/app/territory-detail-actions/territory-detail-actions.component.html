@@ -1,0 +1,14 @@
+<div class="container">
+  <mat-toolbar color="primary" fxLayout="row" class="mat-toolbar">
+    <button mat-fab i18n-title title="Gravar" (click)="save.emit()">
+      <mat-icon>save</mat-icon>
+    </button>
+    <button mat-fab (click)="addChild.emit()" i18n-title title="Adicionar">
+      <mat-icon>add</mat-icon>
+    </button>
+    <button mat-fab (click)="remove.emit()" i18n-title title="Remover">
+      <mat-icon>delete_outline</mat-icon>
+    </button>
+  </mat-toolbar>
+</div>
+

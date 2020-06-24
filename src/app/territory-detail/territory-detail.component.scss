@@ -1,0 +1,39 @@
+
+mat-form-field {
+  width: 100%;
+}
+
+.margin-10 {
+  margin: 10px;
+}
+
+.margin-top-15 {
+  margin-top: 15px;
+}
+
+#levels {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#levels td, #levels th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#levels tr:nth-child(even){background-color: #f2f2f2;}
+
+#levels tr:hover {background-color: #ddd;}
+
+#levels th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.manager {
+  background-color: darkseagreen;
+}

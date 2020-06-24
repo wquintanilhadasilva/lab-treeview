@@ -7,14 +7,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TerritoryComponent } from './territory/territory.component';
 import { MaterialModule } from './material-module';
 import { TerritoryService } from './territory/territory.service';
+import { TerritoryDetailComponent } from './territory-detail/territory-detail.component';
+import { TerritoryDetailActionsComponent } from './territory-detail-actions/territory-detail-actions.component';
+import { TerritoryPanelComponent } from './territory-panel/territory-panel.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TerritoryComponent
+    TerritoryComponent,
+    TerritoryDetailComponent,
+    TerritoryDetailActionsComponent,
+    TerritoryPanelComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
