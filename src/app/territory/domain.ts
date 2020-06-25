@@ -19,6 +19,10 @@ export class Territory {
   approvedAt: Date;
   level?: TerritoryLevel[] = [];
 
+  constructor() {
+    this.createRoot('1º', null);
+  }
+
   public createRoot(name: string, responsable: string): TerritoryLevel {
     this.level = [];
     let root = new TerritoryLevel();

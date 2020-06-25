@@ -23,10 +23,16 @@ export class TerritoryComponent implements OnInit {
   constructor(
     private dataService: TerritoryService,
     private service: TreeFunctionService
-  ) {}
+  ) {
+    this.territory = new Territory();
+  }
 
   private _getChildren = (node: TerritoryLevel) => observableOf(node.children);
   hasNestedChild = (_: number, nodeData: TerritoryLevel) => nodeData.children.length > 0;
+
+  public get selectedLevel(): TerritoryLevel {
+    return this.selectedNode;
+  }
 
   ngOnInit() {
     this.nestedTreeControl = new NestedTreeControl<TerritoryLevel>(this._getChildren);
@@ -100,10 +106,10 @@ export class TerritoryComponent implements OnInit {
   }
 
   selected(value: TerritoryLevel): void {
-    console.log(value);
     this.nestedDataSource.data.forEach(d => d.cleanSelection());
     value.selected = true;
     this.selectedNode = value;
+    console.log(this.selectedNode);
   }
 
 }

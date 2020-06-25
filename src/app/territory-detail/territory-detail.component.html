@@ -24,14 +24,14 @@
 
     </form>
 
-    <div *ngIf="_level?.hasChildren">
+    <div *ngIf="level?.hasChildren">
       <table id="levels">
         <tr>
           <th>Nome</th>
           <th>Responsável</th>
           <th>Tipo</th>
         </tr>
-        <tr *ngFor="let row of _level.getChildrens()">
+        <tr *ngFor="let row of level.getChildrens()">
           <td>{{row.name}}</td>
           <td>{{row.responsable}}</td>
           <td>{{row.levelType === 1 ? 'Gerencial' : 'Operacional'}}</td>

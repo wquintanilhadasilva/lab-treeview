@@ -1,12 +1,3 @@
-<!-- <div class="maxh"  fxFill flex fxLayout="row" fxLayoutAlign="start" fxLayout.sm="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%">
-  <div class="scroll" fxFlex="30" fxLayoutAlign="start" style="background-color: antiquewhite;">
-    <app-territory-panel></app-territory-panel>
-  </div>
-  <div fxFlex="70" fxLayoutAlign="start"  style="background-color: gold;">
-  </div>
-</div> -->
-<!-- <app-add-node (addedNode)="addNode($event)" [isTop]="true"></app-add-node> -->
-
 <div class="maxh"  fxFill flex fxLayout="row" fxLayoutAlign="start" fxLayout.sm="column" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%">
 
   <div fxFlex="40" fxLayoutAlign="start start" style="background-color: antiquewhite;">
@@ -17,8 +8,10 @@
         <mat-tree-node *matTreeNodeDef="let node">
           <li class="mat-tree-node destak" [ngClass]="{'selected': node.selected, 'unselected': !node.selected}">
             <div (click)="selected(node)">
-              <button mat-icon-button disabled></button>
-              <span>{{node.name}}</span>
+              <div fxLayout="row" fxLayoutAlign="start center">
+                <button mat-icon-button disabled></button>
+                <span>{{node.name}}</span>
+              </div>
             </div>
           </li>
         </mat-tree-node>
@@ -53,7 +46,7 @@
 
     <div class="scroll" *ngIf="(selectedNode != null && selectedNode?.selected)">
       <app-territory-detail
-        [level]="selectedNode"
+        [level]="selectedLevel"
         (remove)="deleteNode($event)"
         (addChild)="addChildNode($event)"
         (save)="addNode($event)"

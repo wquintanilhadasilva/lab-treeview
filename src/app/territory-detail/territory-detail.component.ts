@@ -17,8 +17,13 @@ export class TerritoryDetailComponent implements OnInit {
 
   @Input()
   public set level(value: TerritoryLevel) {
+    console.log(value);
     this._level = value;
     this.buildForm();
+  }
+
+  public get level(): TerritoryLevel {
+    return this._level;
   }
 
   @Output()
@@ -37,10 +42,6 @@ export class TerritoryDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._level = new TerritoryLevel();
-    this._level.name = '';
-    this._level.responsable = '';
-    this.buildForm();
   }
 
   addLevel(): void {
