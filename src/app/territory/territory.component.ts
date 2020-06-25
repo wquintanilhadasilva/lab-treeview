@@ -92,17 +92,7 @@ export class TerritoryComponent implements OnInit {
     this.selectedNode = null;
 
     this.refreshTreeData();
-    // const deletedElement: TerritoryLevel = this.service.findFatherNode(nodeToBeDeleted.name, this.nestedDataSource.data);
-    // let elementPosition: number;
-    // if (window.confirm('Are you sure you want to delete ' + nodeToBeDeleted.name + '?' )) {
-    //   if (deletedElement[0]) {
-    //     deletedElement[0].Children.splice(deletedElement[1], 1);
-    //   } else {
-    //       elementPosition = this.service.findPosition(nodeToBeDeleted.name, this.nestedDataSource.data);
-    //       this.nestedDataSource.data.splice(elementPosition, 1);
-    //   }
-    //   this.refreshTreeData();
-    // }
+
   }
 
   selected(value: TerritoryLevel): void {

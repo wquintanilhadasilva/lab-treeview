@@ -9,7 +9,6 @@ import { MaterialModule } from './material-module';
 import { TerritoryService } from './territory/territory.service';
 import { TerritoryDetailComponent } from './territory-detail/territory-detail.component';
 import { TerritoryDetailActionsComponent } from './territory-detail-actions/territory-detail-actions.component';
-import { TerritoryPanelComponent } from './territory-panel/territory-panel.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -18,7 +17,6 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     TerritoryComponent,
     TerritoryDetailComponent,
     TerritoryDetailActionsComponent,
-    TerritoryPanelComponent
   ],
   imports: [
     BrowserModule,
